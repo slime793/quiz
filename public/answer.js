@@ -21,18 +21,25 @@ if (formAnswer) {
     });
     const data = await res.json();
     console.log(data);
+    console.log(data.answer.answer);
     if (data.message === "true") {
-      counter++;
       const card = document.querySelector(".card-title");
+      const cardAnswer = document.querySelector(".card-answer");
       card.innerHTML = data.answer.description;
       const points = document.querySelector(".points");
       counterPoints += +data.answer.points;
       points.innerHTML = counterPoints;
+      card.innerHTML = data.answer.description;
+      cardAnswer.innerHTML = `Правильно!`;
+      counter++;
     }
     if (data.message === "false") {
       counter++;
       const card = document.querySelector(".card-title");
+      const cardAnswer = document.querySelector(".card-answer");
+
       card.innerHTML = data.answer.description;
+      cardAnswer.innerHTML = `Правильный ответ: ${data.viewAns.answer}`;
     }
     if (data.message === "end") {
       console.log("Вопросы кончились");
