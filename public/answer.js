@@ -21,7 +21,7 @@ if (formAnswer) {
     });
     const data = await res.json();
     console.log(data);
-    console.log(data.answer.answer);
+    // console.log(data.answer.answer);
     if (data.message === "true") {
       const card = document.querySelector(".card-title");
       const cardAnswer = document.querySelector(".card-answer");

@@ -23,12 +23,6 @@ module.exports = {
         theme_id: 1,
       },
       {
-        description: "Какое животного имеет хобот",
-        answer: "Не шахматный слон",
-        points: 2,
-        theme_id: 1,
-      },
-      {
         description: "Какой медведь обитает на севере",
         answer: "Белый",
         points: 3,
@@ -66,7 +60,7 @@ module.exports = {
       },
       {
         description: "Какие основные способности имеют Флора?",
-        answer: "Флора",
+        answer: "Управление растениями",
         points: 3,
         theme_id: 3,
       },
