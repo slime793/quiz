@@ -4,11 +4,7 @@ function Card({theme}) {
     <div class="card text-white bg-primary mb-3" style={{maxWidth: "25rem"}}>
       <div class="card-header">{theme.name}</div>
       <div class="card-body">
-        <h5 class="card-title">Primary card title</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
+        <h5 class="card-title">Описание темы</h5>
         <div>
           <a href={`/${theme.id}`} class="btn btn-warning">
             Погнали!

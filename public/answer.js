@@ -7,7 +7,6 @@ if (formAnswer) {
     e.preventDefault();
     const {theme} = formAnswer.dataset;
     const {userAnswer} = e.target;
-    console.log(e);
 
     const res = await fetch(`/${theme}`, {
       method: "PUT",
@@ -20,14 +19,15 @@ if (formAnswer) {
       }),
     });
     const data = await res.json();
-    if (data.message === "Ответ не верный!") {
-      console.log('Ответ не верный!')
-      const card = document.querySelector(".card-text");
-      card.innerHTML = data.description;
+    if (!data.message) {
+      let html =data.answer.description
+      console.log(data.message, '<<<<<<<<<<<<<');
+      const card = document.querySelector(".card-title");
+      console.log(card);
+      card.innerHTML = html;
     }
     counter++;
-    console.log(counter);
-    const card = document.querySelector(".card-text");
+    const card = document.querySelector(".card-title");
     card.innerHTML = data.description;
     formAnswer.reset();
   });

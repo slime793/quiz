@@ -25,7 +25,6 @@ router.put("/:themeId", async (req, res) => {
     const result = await Question.findAll({where: {theme_id: themeId}});
     if (result.find(ans => ans.answer === userAnswer)) {
       if (result.length > counter) {
-        console.log(counter, result.length);
         res.json(result[counter + 1]);
         return;
       } else {
@@ -33,11 +32,9 @@ router.put("/:themeId", async (req, res) => {
         return;
       }
     } else {
-      res.json(result[counter + 1], );
+      res.json({answer:result[counter + 1], message: "Ответ не верный!" });
       return;
-      // res.json({message: "Ответ не верный!"});
     }
-    // res.json({message: "false"});
   } catch ({message}) {
     res.json(message);
   }
