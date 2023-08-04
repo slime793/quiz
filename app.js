@@ -13,9 +13,13 @@ app.use(express.json());
 
 const mainRouter = require('./routes/main.routes');
 const themeRouter = require('./routes/theme.routes');
+const authRouter = require("./routes/views/auth.routes");
+const usersRouter = require("./routes/toplist.routes");
 
 app.use('/', mainRouter);
 app.use('/', themeRouter);
+app.use("/auth", authRouter);
+app.use("/toplist", usersRouter);
 
 app.listen(PORT, () => {
   console.log(`Едем на ${PORT} порту`);

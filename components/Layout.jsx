@@ -1,4 +1,5 @@
 const React = require("react");
+const Navbar = require("./Navbar");
 
 function Layout({title, children}) {
   return (
@@ -13,7 +14,9 @@ function Layout({title, children}) {
           crossOrigin="anonymous"
         />
         <script defer src="/answer.js" />
+        <script defer src="/reg.js" />
       </head>
+      <Navbar />
       <body>{children}</body>
     </html>
   );

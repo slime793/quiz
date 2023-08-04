@@ -1,6 +1,7 @@
 const formAnswer = document.querySelector("#answer");
 
 let counter = 0;
+let counterPoints = 0;
 
 if (formAnswer) {
   formAnswer.addEventListener("submit", async e => {
@@ -24,15 +25,18 @@ if (formAnswer) {
       counter++;
       const card = document.querySelector(".card-title");
       card.innerHTML = data.answer.description;
+      const points = document.querySelector(".points");
+      counterPoints += +data.answer.points;
+      points.innerHTML = counterPoints;
     }
     if (data.message === "false") {
       counter++;
       const card = document.querySelector(".card-title");
       card.innerHTML = data.answer.description;
-    } 
-   if (data.message === "end"){
-      console.log('Вопросы кончились');
-      window.location.assign('/');
+    }
+    if (data.message === "end") {
+      console.log("Вопросы кончились");
+      window.location.assign("/");
     }
 
     formAnswer.reset();
