@@ -12,7 +12,7 @@ function Card({theme}) {
       ></img>
       <div class="card-header">{theme.name}</div>
       <div class="card-body">
-        <h5 class="card-title">Описание темы</h5>
+        <h5 class="card-title">{theme.description}</h5>
         <div>
           <a href={`/${theme.id}`} class="btn btn-warning">
             Погнали!

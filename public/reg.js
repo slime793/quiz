@@ -17,6 +17,6 @@ formReg.addEventListener("submit", async e => {
   const data = await res.json();
   console.log(data);
   if (data.message !== "ok") {
-    window.location.assign('/')
+    window.location.assign("/");
   }
 });

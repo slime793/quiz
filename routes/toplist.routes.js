@@ -1,18 +1,17 @@
 const router = require("express").Router();
+const Toplist = require("../components/Toplist");
 const {User} = require("../db/models");
-const Toplist =  require('../components/Toplist')
 
-router.get("/", async (req, res) => {
+router.get("/list", async (req, res) => {
   try {
-    const users = await User.findAll();
+    const users = await User.findAll({order: [["points", "DESC"]]});
     const document = res.renderComponent(Toplist, {
       title: "Toplist Page",
       users,
     });
-    console.log(document,'==========');
     res.send(document);
-  } catch ({message}) {
-    res.json(message);
+  } catch (error) {
+    res.json(error.message);
   }
 });
 
