@@ -18,11 +18,11 @@ module.exports = (sequelize, DataTypes) => {
       },
       points: {
         allowNull: false,
-        type: DataTypes.BIGINT,
+        type: DataTypes.INTEGER,
       },
       theme_id: {
         allowNull: false,
-        type: DataTypes.BIGINT,
+        type: DataTypes.INTEGER,
         references: {
           model: "Themes",
           key: "id",

@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       points: {
         allowNull: false,
         defaultValue: 0,
-        type: DataTypes.BIGINT,
+        type: DataTypes.INTEGER,
       },
       password: {
         allowNull: false,
