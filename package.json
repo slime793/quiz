@@ -2,7 +2,7 @@
   "name": "web-flashcards-challenge",
   "version": "1.0.0",
   "description": "Мы собираемся создать веб-приложение для флэш-карт. Наше приложение предоставит пользователям возможность использования флэш-карты. \r Пользователь выберет колоду и сыграет партию с флэш-картами.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js -e js,json,jsx",
