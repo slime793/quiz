@@ -1,16 +1,15 @@
 const React = require("react");
 const Layout = require("./Layout");
+const UserRow = require("./UserRow");
 
-function Toplist({title, user}) {
+function Toplist({title, users}) {
   return (
-    <Layout title={title} users={user}>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"></li>
-        <li class="list-group-item">{user.name}</li>
-        <li class="list-group-item">{user.points}</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-      </ul>
+    <Layout title={title}>
+      <div>
+        {users.map(user => (
+          <UserRow user={user} />
+        ))}
+      </div>
     </Layout>
   );
 }
