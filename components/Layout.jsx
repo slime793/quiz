@@ -12,7 +12,7 @@ function Layout({title, children}) {
           integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
           crossOrigin="anonymous"
         />
-        <script defer src="/scripts/add.js" />
+        <script defer src="/answer.js" />
       </head>
       <body>{children}</body>
     </html>

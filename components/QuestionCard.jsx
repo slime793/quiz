@@ -7,8 +7,7 @@ function QuestionCard({questions}) {
         <div class="card-body">
           <h5 class="card-title">{questions[0].description}</h5>
           <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          {questions[0].description}
           </p>
           <div>
           </div>
