@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
       },
     },
+
     {
       sequelize,
       modelName: "Theme",

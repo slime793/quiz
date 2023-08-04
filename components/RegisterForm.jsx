@@ -4,7 +4,7 @@ const Layout = require("./Layout");
 function RegisterForm({title, user}) {
   return (
     <Layout title={title} user={user}>
-      <div className="container">
+      <div className="containerreg">
         <form id="form-reg">
           <div className="mb-3">
             <label for="exampleInputEmail1" className="form-label">

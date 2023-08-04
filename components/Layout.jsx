@@ -15,9 +15,14 @@ function Layout({title, children}) {
         />
         <script defer src="/answer.js" />
         <script defer src="/reg.js" />
+        <link rel="stylesheet" href="/style.css" />
       </head>
       <Navbar />
-      <body>{children}</body>
+      <body className="img"
+      
+      >
+        {children}
+      </body>
     </html>
   );
 }

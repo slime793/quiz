@@ -1,3 +1,21 @@
-.card-body {
+/* .card-body {
   border: 2px solid black;
+} */
+
+.conteiner {
+
+  display: flex;
+  justify-content: space-evenly;
 }
+
+.conteiner {}
+
+.containerreg {}
+
+.img {
+  background: url('https://www.dictionary.com/e/wp-content/uploads/2022/10/20221011_WOTD_Quiz_teal_1000x700.png') 0 0/cover no-repeat;
+}
+
+/* .card_text-white_bg-primary_mb-3 {
+  background-color: black;
+} */

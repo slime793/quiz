@@ -5,8 +5,10 @@ const Layout = require("./Layout");
 function Main({title, themes}) {
   return (
     <Layout title={title}>
-      <div>
-        {themes.map(theme =>(<Card theme={theme}/>))}
+      <div className="conteiner">
+        {themes.map(theme => (
+          <Card theme={theme} />
+        ))}
       </div>
     </Layout>
   );
