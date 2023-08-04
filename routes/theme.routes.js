@@ -30,10 +30,18 @@ router.put("/:themeId", async (req, res) => {
             ans.answer.toLowerCase().trim() === userAnswer.toLowerCase().trim()
         )
       ) {
-        res.json({answer: result[counter + 1], message: "true"});
+        res.json({
+          answer: result[counter + 1],
+          message: "true",
+          viewAns: result[counter],
+        });
         return;
       } else {
-        res.json({answer: result[counter + 1], message: "false"});
+        res.json({
+          answer: result[counter + 1],
+          viewAns: result[counter],
+          message: "false",
+        });
         return;
       }
     } else {
