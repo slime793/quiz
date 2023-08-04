@@ -12,13 +12,13 @@ module.exports = {
       },
       {
         name: "The office",
-        description: "",
+        description: "Сериал Office",
         cover:
           "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/7bbd225f-e6db-4326-b600-1ac294cf9d99/600x900",
       },
       {
         name: "Winx",
-        description: "",
+        description: "Клуб Винкс",
         cover: "https://images.justwatch.com/poster/238911594/s592/winx-club",
       },
     ]);
