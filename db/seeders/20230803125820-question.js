@@ -1,24 +1,36 @@
 "use strict";
-const { Question } = require('../models');
+const {Question} = require("../models");
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
     await Question.bulkCreate([
       {
-        description: "Вопрос 1 Тема 1",
-        answer: 1,
-        points: 1,
+        description: "Где можно спрятаться от волка?",
+        answer: "В цирке. Потому что волк в цирке не выступает",
+        points: 666,
         theme_id: 1,
       },
       {
-        description: "Вопрос 2 Тема 1",
-        answer: 2,
+        description: "У какого слона нет хобота?",
+        answer: "У шахматного",
         points: 2,
         theme_id: 1,
       },
       {
-        description: "Вопрос 3 Тема 1",
-        answer: 3,
+        description: "Какое животное лучший друг человека?",
+        answer: "Собака",
+        points: 1,
+        theme_id: 1,
+      },
+      {
+        description: "Какое животного имеет хобот",
+        answer: "Не шахматный слон",
+        points: 2,
+        theme_id: 1,
+      },
+      {
+        description: "Какой медведь обитает на севере",
+        answer: "Белый",
         points: 3,
         theme_id: 1,
       },
