@@ -19,16 +19,22 @@ if (formAnswer) {
       }),
     });
     const data = await res.json();
-    if (!data.message) {
-      let html =data.answer.description
-      console.log(data.message, '<<<<<<<<<<<<<');
+    console.log(data);
+    if (data.message === "true") {
+      counter++;
       const card = document.querySelector(".card-title");
-      console.log(card);
-      card.innerHTML = html;
+      card.innerHTML = data.answer.description;
     }
-    counter++;
-    const card = document.querySelector(".card-title");
-    card.innerHTML = data.description;
+    if (data.message === "false") {
+      counter++;
+      const card = document.querySelector(".card-title");
+      card.innerHTML = data.answer.description;
+    } 
+   if (data.message === "end"){
+      console.log('Вопросы кончились');
+      window.location.assign('/');
+    }
+
     formAnswer.reset();
   });
 }

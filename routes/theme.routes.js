@@ -23,17 +23,17 @@ router.put("/:themeId", async (req, res) => {
     const {userAnswer, counter} = req.body;
     const {themeId} = req.params;
     const result = await Question.findAll({where: {theme_id: themeId}});
-    if (result.find(ans => ans.answer === userAnswer)) {
-      if (result.length > counter) {
-        res.json(result[counter + 1]);
+    if (result[counter + 1]) {
+      if (result.find(ans => ans.answer === userAnswer)) {
+        res.json({answer: result[counter + 1], message: "true"});
         return;
       } else {
-        res.json({message: "Ответ не верный!"});
-        return;
+        res.json({answer: result[counter + 1], message: "false"});
+      return;
       }
     } else {
-      res.json({answer:result[counter + 1], message: "Ответ не верный!" });
-      return;
+      res.json({message: "end"});
+        return;
     }
   } catch ({message}) {
     res.json(message);
